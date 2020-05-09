@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "DynamicWebsiteFrontEnd"
+    }
+  },
+  "defaultProject": "DynamicWebsiteFrontEnd",
+  "cli": {
+    "analytics": "d215c49b-7e44-4bb3-95b6-97974abfb7bd"
+  }
 }
