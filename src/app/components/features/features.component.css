@@ -1,0 +1,14 @@
+div#main_area {
+    background-color: #b4a7d6;
+}
+
+nav {
+    margin-left: 70px;
+    margin-right: 20px;
+}
+
+li {
+    box-sizing: border-box;
+    border: 2px black solid;
+    margin-bottom: 10px;
+}

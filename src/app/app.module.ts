@@ -13,6 +13,7 @@ import { AccessRecordComponent } from './components/features/community-service/a
 import { LaundryServiceComponent } from './components/features/community-service/laundry-service/laundry-service.component';
 import { ParkingSpaceComponent } from './components/features/community-service/parking-space/parking-space.component';
 import { PaymentItemsComponent } from './components/features/community-service/payment-items/payment-items.component';
+import { FeaturesComponent } from './components/features/features.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { PaymentItemsComponent } from './components/features/community-service/p
     
     ParkingSpaceComponent,
     
-    PaymentItemsComponent
+    PaymentItemsComponent,
+    
+    FeaturesComponent
   ],
   imports: [
     BrowserModule,

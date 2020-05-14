@@ -1,0 +1,12 @@
+tr{
+    line-height: 80px; 
+}
+table{
+    border-collapse:separate;
+    border-spacing: 10px;
+    width: 60%;
+}
+div#it1{
+    border: 2px black solid ;
+    background-color: 	#ffffff;
+}
