@@ -1,0 +1,18 @@
+.top-bar {
+    background-color: red;
+}
+
+.top-bar.fixed {
+    background-color: green;
+}
+nav{
+    background-color: aqua;
+}
+
+.drop-down > ul {
+    display: none;
+}
+
+.drop-down.active > ul {
+    display: block;
+}

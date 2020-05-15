@@ -24,9 +24,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/fomantic-ui/dist/semantic.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/fomantic-ui/dist/semantic.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +122,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "DynamicWebsiteFrontEnd"
 }

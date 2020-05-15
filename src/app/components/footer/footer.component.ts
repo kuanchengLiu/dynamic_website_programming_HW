@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgModule } from 'fomantic-ui';
+import $ from 'jquery'
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
+    
   }
 
 }

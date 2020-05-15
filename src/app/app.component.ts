@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as fomantic from 'fomantic-ui';
 
 @Component({
   selector: 'app-root',
