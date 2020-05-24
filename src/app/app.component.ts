@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import * as fomantic from 'fomantic-ui';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,5 @@ import * as fomantic from 'fomantic-ui';
 })
 export class AppComponent {
   title = 'DynamicWebsiteFrontEnd';
+  
 }

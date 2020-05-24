@@ -6,17 +6,24 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { IntroductionComponent } from './components/features/community-introduction/introduction/introduction.component';
+import { LoginComponent } from './components/features/login/login.component';
+import { EscapeRoutesComponent } from './components/features/community-introduction/escape-routes/escape-routes.component';
+import { HeaderModule } from './components/header/header.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    IntroductionComponent
+    IntroductionComponent,
+    LoginComponent,
+    EscapeRoutesComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HeaderModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

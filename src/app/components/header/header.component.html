@@ -2,9 +2,9 @@
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 
-
+<!-- 
 <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light ">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -13,31 +13,99 @@
 
         <div class="collapse navbar-collapse d-none" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="drop-down" [ngClass]="{ active: active == 'intro' }" (mouseenter)="active = 'intro'" (mouseleave)="active = ''">
-                    <a class="nav-link" href="#">社區介紹</a>
+
+                <li class="drop-down" [ngClass]="{ active: active == 'intro' }" (mouseenter)="active = 'intro'"
+                    (mouseleave)="active = ''">
+                    <a class="browse item active" href="#">社區介紹</a>
+                    
                     <ul>
-                        <li>
-                            <a>社區概覽</a>
-                        </li>
-                        <li>
-                            <a>社區概覽</a>
-                        </li>
+                        <div class="ui link list">
+                            <li>
+                                <a class="item">社區概覽與逃生路線</a>
+                            </li>
+                            <li>
+                                <a class="item">介紹</a>
+                            </li>
+                            <li>
+                                <a class="item">介紹</a>
+                            </li>
+                        </div>
                     </ul>
                 </li>
-                <li class="nav-item" [ngClass]="{ active: active == 'post' }" (mouseenter)="active = 'post'" (mouseleave)="active = ''">
+
+                <li class="nav-item" [ngClass]="{ active: active == 'post' }" (mouseenter)="active = 'post'"
+                    (mouseleave)="active = ''">
                     <a class="nav-link" href="#">文章管理</a>
                 </li>
-                <li class="nav-item" [ngClass]="{ active: active == 'service' }" (mouseenter)="active = 'service'" (mouseleave)="active = ''">
+                <li class="nav-item" [ngClass]="{ active: active == 'service' }" (mouseenter)="active = 'service'"
+                    (mouseleave)="active = ''">
                     <a class="nav-link" href="#">社區服務</a>
                 </li>
-                <li class="nav-item" [ngClass]="{ active: active == 'other' }" (mouseenter)="active = 'other'" (mouseleave)="active = ''">
+                <li class="nav-item" [ngClass]="{ active: active == 'other' }" (mouseenter)="active = 'other'"
+                    (mouseleave)="active = ''">
                     <a class="nav-link" href="#">其他功能</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="account" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
             </form>
         </div>
     </nav>
+</div> -->
+<div class="navBar">
+    <div class="ui two column centered grid">
+        <div class="ui stackable container menu">
+            <div class="item">
+                <p>社區管理系統</p>
+            </div>
+            <div class="ui pointing dropdown link item">
+                <span class="text">社區介紹</span>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <div class="header">Community Introduction</div>
+                    <div class="item" routerLink = "/intrduction">社區介紹</div>
+                    <div class="item">社區概覽圖</div>
+                    <div class="item" routerLink = "/escapeRoute">逃生路線</div>
+                    <div class="item">辦公室服務處地址</div>
+                </div>
+            </div>
+            <div class="ui pointing dropdown link item">
+                <span class="text">文章管理</span>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <div class="header">Announcement</div>
+                    <div class="item">公告</div>
+                </div>
+            </div>
+            <div class="ui pointing dropdown link item">
+                <span class="text">社區服務</span>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <div class="header">Form Overview</div>
+                    <div class="item">公設借用表單</div>
+                    <div class="item">人員出入紀錄</div>
+                    <div class="item">送洗衣物-表單</div>
+                    <div class="item">住戶機車車位申請-表單</div>
+                    <div class="item">
+                        <i class="dropdown icon"></i>
+                        <span class="text">繳費清單</span>
+                        <div class="menu">
+                            <div class="header">單據</div>
+                            <div class="item">水電費</div>
+                            <div class="item">網路費</div>
+                            <div class="item">管理費</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "ui pointing link item">業務的多社區管理</div>
+            <div class="right floated six wide column loginButton">
+                <div class="ui buttons">
+                    <button class="ui inverted red button content loginButton">Sign Up</button>
+                    <div class="or loginButton content"></div>
+                    <button class="ui inverted blue button content" routerLink = "./login">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

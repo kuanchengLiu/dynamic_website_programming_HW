@@ -1,9 +1,19 @@
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js">
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256–2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin=”anonymous”>
+  </script>
+
+<base href="/">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css">
 <!-- header -->
 <app-header></app-header>
-
 <!-- routes will be rendered here -->
-<router-outlet></router-outlet>
-
+<div class = "body">
+  <router-outlet></router-outlet>
+</div>
 <!-- footer -->
 <app-footer></app-footer>

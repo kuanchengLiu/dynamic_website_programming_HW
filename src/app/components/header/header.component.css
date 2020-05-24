@@ -6,13 +6,28 @@
     background-color: green;
 }
 nav{
-    background-color: aqua;
+    background-color: white;
+}
+.navBar .container{
+    padding-top: 0.8rem;
 }
 
-.drop-down > ul {
+.loginButton .content{
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.drop-down > div {
     display: none;
 }
 
-.drop-down.active > ul {
+.drop-down.active > div {
     display: block;
+}
+.nav-item > h4{
+        display: none;
+}
+.nav-item.active > h4{
+        display: block;
+
 }
