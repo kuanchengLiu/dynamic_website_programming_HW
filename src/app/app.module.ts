@@ -9,6 +9,8 @@ import { IntroductionComponent } from './components/features/community-introduct
 import { LoginComponent } from './components/features/login/login.component';
 import { EscapeRoutesComponent } from './components/features/community-introduction/escape-routes/escape-routes.component';
 import { HeaderModule } from './components/header/header.module';
+import { CommunityMapComponent } from './components/features/community-introduction/community-map/community-map.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { HeaderModule } from './components/header/header.module';
     IntroductionComponent,
     LoginComponent,
     EscapeRoutesComponent,
+    CommunityMapComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

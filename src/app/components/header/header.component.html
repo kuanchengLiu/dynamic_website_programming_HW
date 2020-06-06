@@ -2,110 +2,112 @@
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 
-<!-- 
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light ">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">社區管理系統</a>
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+    <div class="container-fluid">
 
-        <div class="collapse navbar-collapse d-none" id="navbarTogglerDemo03">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 d-flex align-items-center justify-content-end">
 
-                <li class="drop-down" [ngClass]="{ active: active == 'intro' }" (mouseenter)="active = 'intro'"
-                    (mouseleave)="active = ''">
-                    <a class="browse item active" href="#">社區介紹</a>
-                    
+                <h1 class="logo mr-auto"><a routerLink="/">ＣＭＳ</a></h1>
+
+                <nav class="nav-menu d-none d-lg-block">
                     <ul>
-                        <div class="ui link list">
-                            <li>
-                                <a class="item">社區概覽與逃生路線</a>
-                            </li>
-                            <li>
-                                <a class="item">介紹</a>
-                            </li>
-                            <li>
-                                <a class="item">介紹</a>
-                            </li>
-                        </div>
-                    </ul>
-                </li>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="/intrduction">About</a></li>
+                        <li><a href="/intrduction">Announcement</a></li>
+                        <li class="drop-down"><a href="#portfolio">Introduction</a>
+                            <ul>
+                                <li><a href="#">Community Introduction</a></li>
+                                <li><a href="/intrduction">社區概覽圖</a></li>
+                                <li><a href="/communityMap">逃生路線</a></li>
+                                <li><a href="/escapeRoute">辦公室服務處地址</a></li>
+                            </ul>
+                        </li>
+                        <li class="drop-down"><a href="">Service</a>
+                            <ul>
+                                <li><a href="#">Form Overview</a></li>
+                                <li class="drop-down"><a href="#">繳費清單</a>
+                                    <ul>
+                                        <li><a href="#">水電費</a></li>
+                                        <li><a href="#">網路費</a></li>
+                                        <li><a href="#">管理費</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">公設借用表單</a></li>
+                                <li><a href="#">人員出入紀錄</a></li>
+                                <li><a href="#">送洗衣物-表單</a></li>
+                                <li><a href="#">住戶機車車位申請-表單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="/login">Login & Sign Up</a></li>
 
-                <li class="nav-item" [ngClass]="{ active: active == 'post' }" (mouseenter)="active = 'post'"
-                    (mouseleave)="active = ''">
-                    <a class="nav-link" href="#">文章管理</a>
-                </li>
-                <li class="nav-item" [ngClass]="{ active: active == 'service' }" (mouseenter)="active = 'service'"
-                    (mouseleave)="active = ''">
-                    <a class="nav-link" href="#">社區服務</a>
-                </li>
-                <li class="nav-item" [ngClass]="{ active: active == 'other' }" (mouseenter)="active = 'other'"
-                    (mouseleave)="active = ''">
-                    <a class="nav-link" href="#">其他功能</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-            </form>
-        </div>
-    </nav>
-</div> -->
-<div class="navBar">
-    <div class="ui two column centered grid">
-        <div class="ui stackable container menu">
-            <div class="item">
-                <p>社區管理系統</p>
-            </div>
-            <div class="ui pointing dropdown link item">
-                <span class="text">社區介紹</span>
-                <i class="dropdown icon"></i>
-                <div class="menu">
-                    <div class="header">Community Introduction</div>
-                    <div class="item" routerLink = "/intrduction">社區介紹</div>
-                    <div class="item">社區概覽圖</div>
-                    <div class="item" routerLink = "/escapeRoute">逃生路線</div>
-                    <div class="item">辦公室服務處地址</div>
-                </div>
-            </div>
-            <div class="ui pointing dropdown link item">
-                <span class="text">文章管理</span>
-                <i class="dropdown icon"></i>
-                <div class="menu">
-                    <div class="header">Announcement</div>
-                    <div class="item">公告</div>
-                </div>
-            </div>
-            <div class="ui pointing dropdown link item">
-                <span class="text">社區服務</span>
-                <i class="dropdown icon"></i>
-                <div class="menu">
-                    <div class="header">Form Overview</div>
-                    <div class="item">公設借用表單</div>
-                    <div class="item">人員出入紀錄</div>
-                    <div class="item">送洗衣物-表單</div>
-                    <div class="item">住戶機車車位申請-表單</div>
-                    <div class="item">
-                        <i class="dropdown icon"></i>
-                        <span class="text">繳費清單</span>
-                        <div class="menu">
-                            <div class="header">單據</div>
-                            <div class="item">水電費</div>
-                            <div class="item">網路費</div>
-                            <div class="item">管理費</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class = "ui pointing link item">業務的多社區管理</div>
-            <div class="right floated six wide column loginButton">
-                <div class="ui buttons">
-                    <button class="ui inverted red button content loginButton">Sign Up</button>
-                    <div class="or loginButton content"></div>
-                    <button class="ui inverted blue button content" routerLink = "./login">Login</button>
-                </div>
+                    </ul>
+                </nav>
+
             </div>
         </div>
     </div>
-</div>
+</header>
+<section id="hero">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+
+            <div class="carousel-item active" style="background-image: url(../../../assets/img/card_normal.png)">
+                <div class="carousel-container">
+                    <div class="container">
+                        <h2 class="animated fadeInDown">Welcome to <span>Community Management System</span></h2>
+                        <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et
+                            est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea
+                            voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi
+                            architecto.</p>
+                        <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" style="background-image: url(../../../assets/img/card_normal.png)">
+                <div class="carousel-container">
+                    <div class="container">
+                        <h2 class="animated fadeInDown">Lorem Ipsum Dolor</h2>
+                        <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et
+                            est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea
+                            voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi
+                            architecto.</p>
+                        <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" style="background-image: url(../../../assets/img/card_normal.png)">
+                <div class="carousel-container">
+                    <div class="container">
+                        <h2 class="animated fadeInDown">Sequi ea ut et est quaerat</h2>
+                        <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et
+                            est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea
+                            voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi
+                            architecto.</p>
+                        <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon icofont-simple-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+</section>
