@@ -56,7 +56,13 @@
  * Zone JS is required by default for Angular itself.
  */
 import 'zone.js/dist/zone';  // Included with Angular CLI.
+import $ from 'jquery'
+window['jQuery'] = $;
 
+declare let require: any;
+
+require("node_modules/fomantic-ui/dist/semantic.min.js");
+require("node_modules/fomantic-ui/dist/components/dropdown.js");
 
 /***************************************************************************************************
  * APPLICATION IMPORTS

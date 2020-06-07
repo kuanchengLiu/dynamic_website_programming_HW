@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import $ from 'jquery';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  active:string = "";
+  ngAfterViewInit() {
+    $('.menu.browse').dropdown();
+  }
   constructor() { }
 
   ngOnInit(): void {

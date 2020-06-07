@@ -8,9 +8,9 @@ describe('FacilityBorrowingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FacilityBorrowingComponent ]
+      declarations: [FacilityBorrowingComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

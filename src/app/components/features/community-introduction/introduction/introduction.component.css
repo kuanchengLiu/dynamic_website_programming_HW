@@ -1,0 +1,8 @@
+.contextMargin {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+.ui.widget > h1{
+    margin-top: auto;
+    margin-bottom: auto;
+}

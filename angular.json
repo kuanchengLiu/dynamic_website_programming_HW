@@ -24,9 +24,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/fomantic-ui/dist/semantic.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/fomantic-ui/dist/semantic.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -90,7 +94,10 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/fomantic-ui/dist/semantic.min.js"
+            ]
           }
         },
         "lint": {
@@ -123,6 +130,6 @@
   },
   "defaultProject": "DynamicWebsiteFrontEnd",
   "cli": {
-    "analytics": "d215c49b-7e44-4bb3-95b6-97974abfb7bd"
+    "analytics": "3498d838-87d4-43cd-90e9-40dceca6e78b"
   }
 }
