@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "DynamicWebsiteFrontEnd"
+  "defaultProject": "DynamicWebsiteFrontEnd",
+  "cli": {
+    "analytics": "3498d838-87d4-43cd-90e9-40dceca6e78b"
+  }
 }
