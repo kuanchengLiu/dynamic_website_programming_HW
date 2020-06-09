@@ -1,12 +1,42 @@
-<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js">
-</script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!DOCTYPE html>
+<html ng-app>
 
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256–2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin=”anonymous”>
+<head>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js">
   </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<base href="/">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256–2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin=”anonymous”>
+    </script>
+
+  <base href="/">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+
+  <!-- <link href="./vendor/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+  <link href="/vendor/icofont/icofont.min.css" type="text/css" rel="stylesheet">
+  <link href="/vendor/boxicons/css/boxicons.min.css" type="text/css" rel="stylesheet">
+  <link href="/vendor/remixicon/remixicon.css" type="text/css" rel="stylesheet">
+  <link href="/vendor/animate.css/animate.min.css" type="text/css" rel="stylesheet">
+  <link href="/vendor/venobox/venobox.css" type="text/css" rel="stylesheet">
+  <link href="/vendor/owl.carousel/assets/owl.carousel.min.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"> -->
+
+</head>
+
+<body>
+  <!-- header -->
+  <app-header></app-header>
+  <!-- routes will be rendered here -->
+  <router-outlet></router-outlet>
+
+  <!-- footer -->
+  <app-footer></app-footer>
+
+
   <script src="/vendor/jquery/jquery.min.js"></script>
   <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="/vendor/jquery.easing/jquery.easing.min.js"></script>
@@ -16,19 +46,8 @@
   <script src="/vendor/counterup/counterup.min.js"></script>
   <script src="/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="/vendor/owl.carousel/owl.carousel.min.js"></script>
-<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="/vendor/icofont/icofont.min.css" rel="stylesheet">
-<link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-<link href="/vendor/remixicon/remixicon.css" rel="stylesheet">
-<link href="/vendor/animate.css/animate.min.css" rel="stylesheet">
-<link href="/vendor/venobox/venobox.css" rel="stylesheet">
-<link href="/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css">
-<!-- header -->
-<app-header></app-header>
-<!-- routes will be rendered here -->
-<div class = "body container">
-  <router-outlet></router-outlet>
-</div>
-<!-- footer -->
-<app-footer></app-footer>
+  <script src="full.js"></script>
+
+</body>
+
+</html>
