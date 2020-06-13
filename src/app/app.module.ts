@@ -19,6 +19,9 @@ import { AccessRecordComponent } from './components/features/community-service/a
 import { LaundryServiceComponent } from './components/features/community-service/laundry-service/laundry-service.component';
 import { ParkingSpaceComponent } from './components/features/community-service/parking-space/parking-space.component';
 import { PaymentItemsComponent } from './components/features/community-service/payment-items/payment-items.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -47,12 +50,14 @@ import { PaymentItemsComponent } from './components/features/community-service/p
     EscapeRoutesComponent,
     CommunityMapComponent,
     HomeComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
-
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

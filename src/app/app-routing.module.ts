@@ -11,6 +11,7 @@ import { AccessRecordComponent } from './components/features/community-service/a
 import { LaundryServiceComponent } from './components/features/community-service/laundry-service/laundry-service.component';
 import { ParkingSpaceComponent } from './components/features/community-service/parking-space/parking-space.component';
 import { PaymentItemsComponent } from './components/features/community-service/payment-items/payment-items.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 
 
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'LaundryService', component: LaundryServiceComponent },
   { path: 'AccessRecord', component: AccessRecordComponent },
   { path: 'FacilityBorrowing', component: FacilityBorrowingComponent },
+  { path: 'SignUp', component: SignUpComponent},
   { path: '', redirectTo: '/intrduction', pathMatch: 'full' },
 ];
 

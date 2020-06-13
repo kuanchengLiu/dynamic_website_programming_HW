@@ -63,6 +63,10 @@ declare let require: any;
 
 require("node_modules/fomantic-ui/dist/semantic.min.js");
 require("node_modules/fomantic-ui/dist/components/dropdown.js");
+// require("./app/full");
+// require("./app/vendor/animate.css/animate.min.css");
+// require("./app/vendor/jquery/jquery.min");
+
 
 /***************************************************************************************************
  * APPLICATION IMPORTS
