@@ -4,11 +4,19 @@
             <div class="four column centered row contextMargin">
                 <div class="column">
                     <div class="ui vertical menu column">
-                        <a class="item">繳費清單</a>
+                        <div class="ui left pointing dropdown link item">
+                            <i class="dropdown icon"></i>
+                            繳費狀態
+                            <div class="menu">
+                                <div class="item" routerLink="/PaymentItems">已繳納</div>
+                                <div class="item" routerLink="/PaymentItems">未繳納</div>
+                            </div>
+                        </div>
                         <a class="item" routerLink="/FacilityBorrowing">公設借用表單</a>
                         <a class="item" routerLink="/AccessRecord">人員出入紀錄</a>
                         <a class="item" routerLink="/LaundryService">送洗衣物-表單 </a>
-                        <a class="item" routerLink="/ParkingSpace">住戶機車車位申請-表單 </a></div>
+                        <a class="item" routerLink="/ParkingSpace">住戶機車車位申請-表單 </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -20,53 +28,48 @@
                             <h1>繳費清單</h1>
                         </div>
                         <div class="col">
-                            <div class="ui dropdown">
-                                <div class="text">水費</div><i class="dropdown icon"></i>
-                                <div class="menu">
-                                    <div class="item">電費</div>
-                                    <div class="item">房租</div>
-                                </div>
+                            <div class="form-group">
+
+                                <select class="custom-select" name="item">
+                                    <option selected>未繳納</option>
+                                    <option value="">已繳納</option>
+                                </select>
                             </div>
                         </div>
                     </div>
                 </div>
                 <hr>
-                <table class="ui celled striped table">
+                <table class="ui five column table">
+                    <thead>
+                        <tr>
+                            <th>日期</th>
+                            <th>內容</th>
+                            <th>最後編輯</th>
+                            <th>編輯者</th>
+                            <th>狀態</th>
+                        </tr>
+                    </thead>
                     <tbody>
                         <tr>
-                            <td class="collapsing">
-                                <i></i> 六月份房租
-                            </td>
-                            <td>8000</td>
-                            <td class="right aligned collapsing">已繳納</td>
+                            <td>06/09</td>
+                            <td>電話費 1000</td>
+                            <td>06/15</td>
+                            <td>Admin</td>
+                            <td>已繳納</td>
                         </tr>
                         <tr>
-                            <td>
-                                <i></i> 五月份房租
-                            </td>
-                            <td>8000</td>
-                            <td class="right aligned">已繳納</td>
+                            <td>06/09</td>
+                            <td>電費 10000</td>
+                            <td>06/15</td>
+                            <td>Admin</td>
+                            <td>已繳納</td>
                         </tr>
                         <tr>
-                            <td>
-                                <i></i> 四月份房租
-                            </td>
-                            <td>8000</td>
-                            <td class="right aligned">已繳納</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i></i> 三月份房租
-                            </td>
-                            <td>8000</td>
-                            <td class="right aligned">已繳納</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i></i> 二月份房租
-                            </td>
-                            <td>8000</td>
-                            <td class="right aligned">已繳納</td>
+                            <td>06/09</td>
+                            <td>水費 1000000</td>
+                            <td>06/15</td>
+                            <td>Admin</td>
+                            <td>已繳納</td>
                         </tr>
                     </tbody>
                 </table>

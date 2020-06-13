@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import $ from 'jquery';
 @Component({
   selector: 'app-facility-borrowing',
   templateUrl: './facility-borrowing.component.html',
@@ -9,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class FacilityBorrowingComponent implements OnInit {
 
   constructor() { }
-
+  ngAfterViewInit() {
+    $('.ui.dropdown').dropdown();
+  }
   ngOnInit(): void {
   }
 

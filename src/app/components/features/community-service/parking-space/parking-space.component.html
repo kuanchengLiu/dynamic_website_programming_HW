@@ -8,7 +8,8 @@
                         <a class="item" routerLink="/FacilityBorrowing">公設借用表單</a>
                         <a class="item" routerLink="/AccessRecord">人員出入紀錄</a>
                         <a class="item" routerLink="/LaundryService">送洗衣物-表單 </a>
-                        <a class="item">住戶機車車位申請-表單 </a></div>
+                        <a class="item">住戶機車車位申請-表單 </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -16,9 +17,22 @@
             <div class="top_news_detail_visual" id="contextMargin">
                 <h1>住戶機車車位申請-表單</h1>
                 <hr>
-                <div class="container">
-
-                </div>
+                <form class="ui form">
+                    <div class="field">
+                        <label>車位類型</label>
+                        <select class="ui fluid dropdown">
+                            <option value="">選擇項目</option>
+                            <option value="a">汽車</option>
+                            <option value="b">機車</option>
+                            <option value="b">重型機車</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>希望的位置(選填)</label>
+                        <input type="text" name="" placeholder="選填">
+                    </div>
+                    <div class="ui button" tabindex="0">送出</div>
+                </form>
 
             </div>
         </div>

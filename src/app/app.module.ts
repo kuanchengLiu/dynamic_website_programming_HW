@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { FormGroup, ReactiveFormsModule, NgControl, FormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
+import { PersonalComponent } from './components/features/personal/personal.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { FooterComponent } from './components/footer/footer.component';
     CommunityMapComponent,
     HomeComponent,
     SignUpComponent,
+    PersonalComponent,
   ],
   imports: [
     BrowserModule,

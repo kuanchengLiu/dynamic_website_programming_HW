@@ -12,6 +12,8 @@ import { LaundryServiceComponent } from './components/features/community-service
 import { ParkingSpaceComponent } from './components/features/community-service/parking-space/parking-space.component';
 import { PaymentItemsComponent } from './components/features/community-service/payment-items/payment-items.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { HomeComponent } from './components/home/home.component';
+import { PersonalComponent } from './components/features/personal/personal.component';
 
 
 
@@ -21,6 +23,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 
 const routes: Routes = [
+  { path: 'person', component: PersonalComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'intrduction', component: IntroductionComponent },
   { path: 'escapeRoute', component: EscapeRoutesComponent },
