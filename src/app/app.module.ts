@@ -20,6 +20,7 @@ import { LaundryServiceComponent } from './components/features/community-service
 import { ParkingSpaceComponent } from './components/features/community-service/parking-space/parking-space.component';
 import { PaymentItemsComponent } from './components/features/community-service/payment-items/payment-items.component';
 import { PersonalComponent } from './components/features/personal/personal.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { PersonalComponent } from './components/features/personal/personal.compo
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
+    NgbModule,
 
   ],
   providers: [],

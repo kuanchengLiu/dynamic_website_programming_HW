@@ -1,57 +1,35 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-
 <!-- ======= Header ======= -->
-<header id="header" class="fixed-top ">
-    <div class="container-fluid">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/">ＣＭＳ</a>
+    <button class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="nav navbar-nav ml-auto">
 
-        <div class="row justify-content-center">
-            <div class="col-xl-10 d-flex align-items-center justify-content-end">
-
-                <h1 class="logo mr-auto"><a routerLink="/">ＣＭＳ</a></h1>
-
-                <nav class="nav-menu d-none d-lg-block">
-                    <ul>
-                        <li class="active"><a routerLink="/home">Home</a></li>
-                        <li><a routerLink="/Announcement">Announcement</a></li>
-                        <li class="drop-down"><a routerLink="/intrduction">Introduction <i
-                                    class="fas fa-caret-right"></i></a>
-                            <ul>
-
-                                <li><a routerLink="/intrduction">About</a></li>
-                                <li><a routerLink="/communityMap">社區概覽圖</a></li>
-                                <li><a routerLink="/escapeRoute">逃生路線</a></li>
-                                <li><a routerLink="/communityMap">辦公室服務處地址</a></li>
-                            </ul>
-                        </li>
-                        <li class="drop-down"><a routerLink="/PaymentItems">Service <i
-                                    class="fas fa-caret-right"></i></a>
-                            <ul>
-
-                                <li class="drop-down"><a routerLink="/PaymentItems">繳費清單 <i
-                                            class="fas fa-caret-right"></i></a>
-                                    <ul>
-                                        <li><a routerLink="/PaymentItems">已繳納</a></li>
-                                        <li><a routerLink="/PaymentItems">未繳納</a></li>
-
-                                    </ul>
-                                </li>
-                                <li><a routerLink="/FacilityBorrowing">公設借用表單</a></li>
-                                <li><a routerLink="/AccessRecord">人員出入紀錄</a></li>
-                                <li><a routerLink="/LaundryService">送洗衣物-表單</a></li>
-                                <li><a routerLink="/ParkingSpace">住戶機車車位申請-表單</a></li>
-                            </ul>
-                        </li>
-                        <li><a routerLink="/other">others</a></li>
-                        <li><a routerLink="/login">Login & Sign Up</a></li>
-                        <li><a routerLink="/person">personal</a></li>
-
-                    </ul>
-                </nav>
-
-            </div>
-        </div>
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="/home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/Announcement">Announcement</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/intrduction">Introduction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/PaymentItems">Service</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/other">Others</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/login">Login & Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/person">personal</a>
+            </li>
+        </ul>
     </div>
-</header>
+</nav>
 <div class="empty-header"></div>
+<div id="nav-blank" class="collapse"></div>
