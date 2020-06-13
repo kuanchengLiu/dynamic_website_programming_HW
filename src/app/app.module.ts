@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { IntroductionComponent } from './components/features/community-introduction/introduction/introduction.component';
 import { LoginComponent } from './components/features/login/login.component';
 import { EscapeRoutesComponent } from './components/features/community-introduction/escape-routes/escape-routes.component';
@@ -21,7 +20,8 @@ import { ParkingSpaceComponent } from './components/features/community-service/p
 import { PaymentItemsComponent } from './components/features/community-service/payment-items/payment-items.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, ReactiveFormsModule, NgControl, FormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -57,7 +57,8 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HeaderModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

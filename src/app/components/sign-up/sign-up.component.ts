@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, NgModel } from '@angular/forms';
+import { AccountServiceService } from 'src/app/account-service.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,7 +8,7 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-
+  
   public account: Account;
   registerForm = new FormGroup({
     name: new FormControl(),
@@ -15,9 +16,13 @@ export class SignUpComponent implements OnInit {
     email: new FormControl(),
     phone: new FormControl(),
     address: new FormControl(),
-    userName: new FormControl()
+    username: new FormControl(),
+    password: new FormControl(),
+    password_confirm: new FormControl()
+    
   });
-  constructor() {
+
+  constructor(private accountService: AccountServiceService) {
     
    }
 
@@ -27,5 +32,6 @@ export class SignUpComponent implements OnInit {
   register(registerForm) {
     console.log(registerForm);
   }
+
 
 }
