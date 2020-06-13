@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import $ from 'jquery';
 @Component({
   selector: 'app-parking-space',
   templateUrl: './parking-space.component.html',
@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ParkingSpaceComponent implements OnInit {
 
   constructor() { }
-
+  ngAfterViewInit() {
+    $('.ui.dropdown').dropdown();
+  }
   ngOnInit(): void {
   }
 

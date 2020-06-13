@@ -19,6 +19,7 @@ import { AccessRecordComponent } from './components/features/community-service/a
 import { LaundryServiceComponent } from './components/features/community-service/laundry-service/laundry-service.component';
 import { ParkingSpaceComponent } from './components/features/community-service/parking-space/parking-space.component';
 import { PaymentItemsComponent } from './components/features/community-service/payment-items/payment-items.component';
+import { PersonalComponent } from './components/features/personal/personal.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { PaymentItemsComponent } from './components/features/community-service/p
     EscapeRoutesComponent,
     CommunityMapComponent,
     HomeComponent,
+    PersonalComponent,
   ],
   imports: [
     BrowserModule,

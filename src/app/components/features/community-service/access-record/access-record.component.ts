@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import $ from 'jquery';
 
 @Component({
   selector: 'app-access-record',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class AccessRecordComponent implements OnInit {
 
   constructor() { }
-
+  ngAfterViewInit() {
+    $('.ui.dropdown').dropdown();
+  }
   ngOnInit(): void {
   }
 
