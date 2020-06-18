@@ -1,35 +1,35 @@
 <div class="container contextMargin">
-    <div class="container">
-        <div class="row">
-            <div class="col-7">
-                <h1>公告</h1>
-            </div>
-            <div>
-                <div class="ui search">
-                    <div class="ui icon input"><input class="prompt" type="text" placeholder="Common passwords..."><i
-                            class="search icon"></i></div>
-                    <div class="results"></div>
-                </div>
-            </div>
+    <h1 class="ui dividing header">公告</h1>
+
+    <div class="ui message" *ngFor="let announcement of announcements; index as index">
+        <div class="toast-header">
+            <strong class="mr-auto">{{ announcement.title }}</strong>
+            <i class="edit icon" (click)="edit(index)" title="編輯公告"></i>
+        </div>
+        <div class="toast-body">
+            {{ announcement.content }}
         </div>
     </div>
 
-    <hr>
-    <div>
-        <div class="ui message">
-            <div class="header">Changes in Service </div>
-            <p>We just updated our privacy policy here to better service our customers. We recommend reviewing the
-                changes. </p>
-        </div>
-        <div class="ui message">
-            <div class="header">Changes in Service </div>
-            <p>We just updated our privacy policy here to better service our customers. We recommend reviewing the
-                changes. </p>
-        </div>
-        <div class="ui message">
-            <div class="header">Changes in Service </div>
-            <p>We just updated our privacy policy here to better service our customers. We recommend reviewing the
-                changes. </p>
+    <div class="popup-background" [class]="{ show: editing }">
+        <div class="popup-window ui piled segment">
+            <h1 class="ui header">編輯公告</h1>
+            <form class="ui form" [class]="{ loading: submitting }">
+                <div class="field">
+                    <label>標題</label>
+                    <input type="text" name="title" [(ngModel)]="editingAnnouncement.title">
+                </div>
+                <div class="field">
+                    <label>內文</label>
+                    <textarea type="text" name="content" [(ngModel)]="editingAnnouncement.content"></textarea>
+                </div>
+                <div class="ui fluid buttons">
+                    <button class="ui positive button" (click)="submitEdit()">送出</button>
+                    <div class="or"></div>
+                    <button class="ui button" (click)="editing = false;">取消</button>
+                </div>
+            </form>
+            <div class="ui text loader">載入中</div>
         </div>
     </div>
 </div>

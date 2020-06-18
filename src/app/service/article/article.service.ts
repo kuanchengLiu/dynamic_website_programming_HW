@@ -16,8 +16,9 @@ export class ArticleService {
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
-  getAllArticle(): Observable<any>{
-    const getter =  this.http.get<any>(this.apiURL+'article');
+
+  getAllArticle(): Observable<any> {
+    const getter = this.http.get<any>(this.apiURL + 'article');
     return getter;
   }
   createEvent(requestArticle: CreateArticle[]): Observable<CreateArticle[]> {

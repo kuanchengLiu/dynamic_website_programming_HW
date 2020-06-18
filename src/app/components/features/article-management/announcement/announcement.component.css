@@ -7,3 +7,51 @@
     margin-top: auto;
     margin-bottom: auto;
 }
+
+.toast-header {
+    background-color: transparent;
+}
+
+.edit.icon {
+    cursor: pointer;
+}
+
+.popup-background {
+    display: none;
+}
+
+.popup-background.show {
+    display: block;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+}
+
+.popup-window {
+    min-width: 500px;
+}
+
+@media (max-width: 500px) {
+    .popup-background {
+        top: 3rem;
+        height: calc(100% - 3rem);
+    }
+
+    .popup-window {
+        min-width: initial;
+        width: 100%;
+        height: 100%;
+    }
+}
