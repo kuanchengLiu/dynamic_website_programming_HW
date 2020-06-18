@@ -12,7 +12,6 @@ import { CommunityMapComponent } from './components/features/community-introduct
 import { HomeComponent } from './components/home/home.component';
 
 import { AnnouncementComponent } from './components/features/article-management/announcement/announcement.component';
-import { MultiCommunityManagementComponent } from './components/features/others/multi-community-management/multi-community-management.component';
 import { FacilityBorrowingComponent } from './components/features/community-service/facility-borrowing/facility-borrowing.component';
 import { AccessRecordComponent } from './components/features/community-service/access-record/access-record.component';
 import { LaundryServiceComponent } from './components/features/community-service/laundry-service/laundry-service.component';
@@ -32,8 +31,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FooterComponent,
 
     AnnouncementComponent,
-
-    MultiCommunityManagementComponent,
 
     FacilityBorrowingComponent,
 
