@@ -9,21 +9,13 @@ import { RequestKanban, ResponseKanban } from 'src/app/Account';
 })
 export class KanbanService {
 
-  private apiURL = 'http://test32.yukina.tw:8000/api/v1/';
+  private apiURL = 'http://api.test32.yukina.tw/api/v1/';
 
   constructor(private http: HttpClient, private messageService: MessageService) { }
 
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS, PATCH',
-      'Authorization': 'authkey',
-      'Access-Control-Max-Age': '86400',
-    })
-  };
+
   getAllKanban(): Observable<any> {
-    const getter = this.http.get<any>(this.apiURL + 'kanban',this.httpOptions);
+    const getter = this.http.get<any>(this.apiURL + 'kanban/');
     return getter;
   }
   createKanban(requestKanba: RequestKanban[]): Observable<RequestKanban[]> {

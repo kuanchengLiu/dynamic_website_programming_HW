@@ -10,21 +10,14 @@ import { Account } from './Account';
 })
 
 export class AccountServiceService {
-  private apiURL = 'http://test32.yukina.tw:8000/api/v1/'
+  private apiURL = 'http://api.test32.yukina.tw/api/v1/'
 
   constructor(private http: HttpClient, private messageService: MessageService) { }
 
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': 'http://test32.yukina.tw:8000',
-      'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS, PETCH',
-      'Access-Control-Max-Age': '86400'
-    })
-  };
+
 
   getAllAccount(): Observable<any> {
-    const accounts = this.http.get<any>(this.apiURL + 'account', this.httpOptions);
+    const accounts = this.http.get<any>(this.apiURL + 'account/');
     return accounts;
   }
   createAccount(account: Account[]): Observable<Account[]> {

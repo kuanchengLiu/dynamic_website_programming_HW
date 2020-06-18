@@ -6,13 +6,13 @@ export interface Account {
     phone: string,
     address: string
 }
-export interface RequestArticle {
+export interface CreateArticle {
     title: string,
     converImage: string,
     content: string
 }
 
-export interface ResponseArticle {
+export interface PatchArticle {
     uuid: string,
     owner: string,
     createData: string,

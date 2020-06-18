@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountServiceService } from './account-service.service';
-import { Account } from './Account';
+import { Account, Permission } from './Account';
 import { ArticleService } from './service/article/article.service';
 import { KanbanService } from './service/kanban/kanban.service';
 import { timeout } from 'rxjs/operators';
+import { PermissionService } from './service/permission/permission.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ import { timeout } from 'rxjs/operators';
   styleUrls: ['./app.component.css', './vendor/bootstrap/css/bootstrap.min.css']
 })
 export class AppComponent{
-  constructor(private accountService: AccountServiceService, private articleService: ArticleService, private kanbanService: KanbanService) { }
+  constructor(private accountService: AccountServiceService, private articleService: ArticleService, private kanbanService: KanbanService, private permissionChacker: PermissionService) { }
   
   accountCreator: Account[] = [
     {
@@ -24,6 +25,13 @@ export class AppComponent{
     }
 
   ];
+
+  permission: Permission = 
+    {
+      'account': 'YukinaMochizuki',
+      'permission': '1'
+    };
+
   ngOnInit() {
     this.accountService.getAllAccount()
       .subscribe((response) => {
@@ -40,6 +48,11 @@ export class AppComponent{
     this.kanbanService.getAllKanban()
       .subscribe((response) => {
         console.log(response)
+      });
+    
+    this.permissionChacker.checkPermission(this.permission)
+      .subscribe((response) => {
+        console.log(response);
       });
     
   }

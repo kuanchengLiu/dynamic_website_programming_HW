@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MessageService } from 'src/app/message.service';
 import { Observable } from 'rxjs';
-import { RequestArticle, ResponseArticle } from 'src/app/Account';
+import { CreateArticle, PatchArticle } from 'src/app/Account';
 
 @Injectable({
   providedIn: 'root'
@@ -20,16 +20,16 @@ export class ArticleService {
     const getter =  this.http.get<any>(this.apiURL+'article');
     return getter;
   }
-  createEvent(requestKanba: RequestArticle[]): Observable<RequestArticle[]> {
-    const creator = this.http.post<RequestArticle[]>(this.apiURL + 'article/', requestKanba)
+  createEvent(requestArticle: CreateArticle[]): Observable<CreateArticle[]> {
+    const creator = this.http.post<CreateArticle[]>(this.apiURL + 'article/', requestArticle)
     return creator;
   }
-  putEvent(response: ResponseArticle[], uuid: string): Observable<ResponseArticle[]> {
-    const putter = this.http.put<ResponseArticle[]>(this.apiURL + 'article/' + uuid, response)
+  patchEvent(response: PatchArticle[], uuid: string): Observable<PatchArticle[]> {
+    const putter = this.http.patch<PatchArticle[]>(this.apiURL + 'article/' + uuid+'/', response)
     return putter;
   }
   deleteEvent(accountname: string, event_uuid: boolean) {
-    const deleter = this.http.delete<any>(this.apiURL + 'article/' + accountname + '/' + event_uuid);
+    const deleter = this.http.delete<any>(this.apiURL + 'article/' + accountname + '/' + event_uuid+'/');
     return deleter;
   }
 }
