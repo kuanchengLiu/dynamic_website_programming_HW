@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MessageService } from 'src/app/message.service';
 import { Observable } from 'rxjs';
-import { RequestArticle } from 'src/app/Account';
 
 @Injectable({
   providedIn: 'root'
