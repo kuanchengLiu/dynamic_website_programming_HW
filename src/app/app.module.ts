@@ -25,7 +25,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PersonalComponent } from './components/features/personal/personal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +52,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CommunityMapComponent,
     HomeComponent,
     SignUpComponent,
-    PersonalComponent,
+    PersonalComponent
   ],
   imports: [
     BrowserModule,

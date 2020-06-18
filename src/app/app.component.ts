@@ -4,15 +4,16 @@ import { Account } from './Account';
 import { ArticleService } from './service/article/article.service';
 import { KanbanService } from './service/kanban/kanban.service';
 import { timeout } from 'rxjs/operators';
+import { GroupService } from './service/group/group.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css', './vendor/bootstrap/css/bootstrap.min.css']
 })
-export class AppComponent{
-  constructor(private accountService: AccountServiceService, private articleService: ArticleService, private kanbanService: KanbanService) { }
-  
+export class AppComponent {
+  constructor(private accountService: AccountServiceService, private articleService: ArticleService, private kanbanService: KanbanService, private groupService: GroupService) { }
+
   accountCreator: Account[] = [
     {
       "username": "YukinaMochizuki",
@@ -41,9 +42,14 @@ export class AppComponent{
       .subscribe((response) => {
         console.log(response)
       });
-    
+
+    this.groupService.getAllGroup()
+      .subscribe((response) => {
+        console.log(response)
+      })
+
   }
-  
+
   title = 'DynamicWebsiteFrontEnd';
 
 }

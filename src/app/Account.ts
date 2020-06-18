@@ -15,7 +15,7 @@ export interface RequestArticle {
 export interface ResponseArticle {
     uuid: string,
     owner: string,
-    createData: string,
+    createDate: string,
     lastEditDate: string,
     lastEditAccount: string,
     title: string,
@@ -58,12 +58,12 @@ export interface ResponseEvent {
 
 
 
-export interface Permission{
+export interface Permission {
     account: string,
     permission: string
 }
 
-export interface information{
+export interface information {
     title: string,
     coverImage: string,
     content: string

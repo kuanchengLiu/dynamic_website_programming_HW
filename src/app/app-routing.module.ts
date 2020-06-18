@@ -15,13 +15,6 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { HomeComponent } from './components/home/home.component';
 import { PersonalComponent } from './components/features/personal/personal.component';
 
-
-
-
-
-
-
-
 const routes: Routes = [
   { path: 'person', component: PersonalComponent },
   { path: 'home', component: HomeComponent },
@@ -36,7 +29,7 @@ const routes: Routes = [
   { path: 'LaundryService', component: LaundryServiceComponent },
   { path: 'AccessRecord', component: AccessRecordComponent },
   { path: 'FacilityBorrowing', component: FacilityBorrowingComponent },
-  { path: 'SignUp', component: SignUpComponent},
+  { path: 'SignUp', component: SignUpComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 

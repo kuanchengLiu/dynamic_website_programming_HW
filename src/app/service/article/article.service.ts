@@ -16,16 +16,17 @@ export class ArticleService {
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
-  getAllArticle(): Observable<any>{
-    const getter =  this.http.get<any>(this.apiURL+'article');
+
+  getAllArticle(): Observable<any> {
+    const getter = this.http.get<any>(this.apiURL + 'article');
     return getter;
   }
   createEvent(requestKanba: RequestArticle[]): Observable<RequestArticle[]> {
     const creator = this.http.post<RequestArticle[]>(this.apiURL + 'article/', requestKanba)
     return creator;
   }
-  putEvent(response: ResponseArticle[], uuid: string): Observable<ResponseArticle[]> {
-    const putter = this.http.put<ResponseArticle[]>(this.apiURL + 'article/' + uuid, response)
+  patchEvent(response: ResponseArticle, uuid: string): Observable<ResponseArticle> {
+    const putter = this.http.patch<ResponseArticle>(this.apiURL + 'article/' + uuid, response)
     return putter;
   }
   deleteEvent(accountname: string, event_uuid: boolean) {
