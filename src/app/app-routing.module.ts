@@ -37,7 +37,7 @@ const routes: Routes = [
   { path: 'AccessRecord', component: AccessRecordComponent },
   { path: 'FacilityBorrowing', component: FacilityBorrowingComponent },
   { path: 'SignUp', component: SignUpComponent},
-  { path: '', redirectTo: '/intrduction', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({

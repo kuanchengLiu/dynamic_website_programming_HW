@@ -23,6 +23,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { FormGroup, ReactiveFormsModule, NgControl, FormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
 import { PersonalComponent } from './components/features/personal/personal.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -60,7 +61,9 @@ import { PersonalComponent } from './components/features/personal/personal.compo
     HeaderModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

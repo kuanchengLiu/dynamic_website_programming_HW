@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MessageService } from 'src/app/message.service';
 import { Observable } from 'rxjs';
-import { PostRequestEvent, PutRequestEvent } from 'src/app/Account';
+import { PostRequestEvent } from 'src/app/Account';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +16,8 @@ export class EventService {
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
-  getAllEvent(): Observable<any> {
-    const getter = this.http.get<any>(this.apiURL + 'article');
+  getAllEvent(accountname: string, type: string): Observable<any> {
+    const getter = this.http.get<any>(this.apiURL + 'event/' + accountname + '/' + type);
     return getter;
   }
 
@@ -25,12 +25,12 @@ export class EventService {
     const creator = this.http.post<PostRequestEvent[]>(this.apiURL + 'event/', requestKanba)
     return creator;
   }
-  putEvent(response: PutRequestEvent[], uuid: string): Observable<PutRequestEvent[]> {
-    const putter = this.http.put<PutRequestEvent[]>(this.apiURL + 'event/' + uuid, response)
+  patchEvent(response: PostRequestEvent[], uuid: string): Observable<PostRequestEvent[]> {
+    const putter = this.http.put<PostRequestEvent[]>(this.apiURL + 'event/' + uuid, response)
     return putter;
   }
-  deleteEvent(accountname: string, event_uuid: boolean) {
-    const deleter = this.http.delete<any>(this.apiURL + 'event/' + accountname + '/' + event_uuid);
+  deleteEvent(accountname: string, ) {
+    const deleter = this.http.delete<any>(this.apiURL + 'event/' + accountname);
     return deleter;
   }
 }

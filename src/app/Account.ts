@@ -26,7 +26,8 @@ export interface ResponseArticle {
 export interface RequestKanban {
     name: string,
     owner: string,
-    description: string
+    description: string,
+    eventType: string
 }
 
 export interface ResponseKanban {
@@ -40,6 +41,7 @@ export interface ResponseKanban {
 
 export interface PostRequestEvent {
     owner: string,
+    eventType: string,
     context: string,
     status: string
 }
@@ -54,7 +56,15 @@ export interface ResponseEvent {
     status: string
 }
 
-export interface PutRequestEvent {
-    context: string,
-    status: string
+
+
+export interface Permission{
+    account: string,
+    permission: string
+}
+
+export interface information{
+    title: string,
+    coverImage: string,
+    content: string
 }

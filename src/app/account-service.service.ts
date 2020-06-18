@@ -10,16 +10,21 @@ import { Account } from './Account';
 })
 
 export class AccountServiceService {
-  private apiURL = 'https://virtserver.swaggerhub.com/YukinaMochizuki/Dynamic_Web_Project/1.1.0/'
+  private apiURL = 'http://test32.yukina.tw:8000/api/v1/'
 
   constructor(private http: HttpClient, private messageService: MessageService) { }
 
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': 'http://test32.yukina.tw:8000',
+      'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS, PETCH',
+      'Access-Control-Max-Age': '86400'
+    })
   };
 
   getAllAccount(): Observable<any> {
-    const accounts = this.http.get<any>(this.apiURL + 'account');
+    const accounts = this.http.get<any>(this.apiURL + 'account', this.httpOptions);
     return accounts;
   }
   createAccount(account: Account[]): Observable<Account[]> {

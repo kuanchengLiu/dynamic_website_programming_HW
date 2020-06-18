@@ -9,27 +9,33 @@ import { RequestKanban, ResponseKanban } from 'src/app/Account';
 })
 export class KanbanService {
 
-  private apiURL = 'https://virtserver.swaggerhub.com/YukinaMochizuki/Dynamic_Web_Project/1.1.0/';
+  private apiURL = 'http://test32.yukina.tw:8000/api/v1/';
 
   constructor(private http: HttpClient, private messageService: MessageService) { }
 
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS, PATCH',
+      'Authorization': 'authkey',
+      'Access-Control-Max-Age': '86400',
+    })
   };
   getAllKanban(): Observable<any> {
-    const getter = this.http.get<any>(this.apiURL + 'kanban');
+    const getter = this.http.get<any>(this.apiURL + 'kanban',this.httpOptions);
     return getter;
   }
   createKanban(requestKanba: RequestKanban[]): Observable<RequestKanban[]> {
     const creator = this.http.post<RequestKanban[]>(this.apiURL + 'kanban/', requestKanba)
     return creator;
   }
-  putKanban(response: ResponseKanban[], uuid: string): Observable<ResponseKanban[]> {
-    const putter = this.http.put<ResponseKanban[]>(this.apiURL + 'kanban/' + uuid, response)
+  patchKanban(response: ResponseKanban[], uuid: string): Observable<ResponseKanban[]> {
+    const putter = this.http.patch<ResponseKanban[]>(this.apiURL + 'kanban/' + uuid, response)
     return putter;
   }
-  deleteKanban(uuid: string, deleteArticle: boolean) {
-    const deleter = this.http.delete<any>(this.apiURL + 'kanban/' + uuid + '/' + deleteArticle);
+  deleteKanban(uuid: string) {
+    const deleter = this.http.delete<any>(this.apiURL + 'kanban/' + uuid );
     return deleter;
   }
 }
