@@ -1,60 +1,52 @@
 <div class="container contextMargin">
     <div class="ui stackable vertically divided grid">
         <div class="four wide column">
-            <div class="four column centered row contextMargin">
-                <div class="column">
-                    <div class="ui vertical menu column">
-                        <a class="item" routerLink="/PaymentItems">繳費清單</a>
-                        <a class="item">公設借用表單</a>
-                        <a class="item" routerLink="/AccessRecord">人員出入紀錄</a>
-                        <a class="item" routerLink="/LaundryService">送洗衣物-表單 </a>
-                        <a class="item" routerLink="/ParkingSpace">住戶機車車位申請-表單 </a>
-                    </div>
-                </div>
+            <div class="ui fluid vertical menu">
+                <a class="item" routerLink="/PaymentItems">繳費清單</a>
+                <a class="item active">公設借用表單</a>
+                <a class="item" routerLink="/AccessRecord">人員出入紀錄</a>
+                <a class="item" routerLink="/LaundryService">送洗衣物-表單 </a>
+                <a class="item" routerLink="/ParkingSpace">住戶機車車位申請-表單 </a>
             </div>
         </div>
-        <div class="eight wide column">
-            <div class="top_news_detail_visual" id="contextMargin">
-
-                <h1>公設借用表單</h1>
-                <hr>
-                <form class="ui form">
-                    <div class="field">
-                        <label>借用設施</label>
-                        <select class="ui fluid dropdown">
-                            <option value="">選擇物品</option>
-                            <option value="a">羽球拍</option>
-                            <option value="b">撞球</option>
-                            <option value="c">健身用品</option>
-                            <option value="d">推車</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label>借用時間</label>
-                        <div class="column">
-                            <div class='col'>
-                                <div class="form-group row">
-                                    <label for="example-datetime-local-input" class="col-2 col-form-label">開始時間</label>
-                                    <div class="col-10">
-                                        <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
-                                            id="example-datetime-local-input" name="start">
-                                    </div>
+        <div class="twelve wide column">
+            <h1 class="ui dividing header">公設借用表單</h1>
+            <form class="ui form">
+                <div class="field">
+                    <label>借用設施</label>
+                    <select class="ui fluid dropdown">
+                        <option value="">選擇物品</option>
+                        <option value="a">羽球拍</option>
+                        <option value="b">撞球</option>
+                        <option value="c">健身用品</option>
+                        <option value="d">推車</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>借用時間</label>
+                    <div class="column">
+                        <div class='col'>
+                            <div class="form-group row">
+                                <label for="example-datetime-local-input" class="col-2 col-form-label">開始時間</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
+                                        id="example-datetime-local-input" name="start">
                                 </div>
                             </div>
-                            <div class='col'>
-                                <div class="form-group row">
-                                    <label for="example-datetime-local-input" class="col-2 col-form-label">結束時間</label>
-                                    <div class="col-10">
-                                        <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
-                                            id="example-datetime-local-input" name="end">
-                                    </div>
+                        </div>
+                        <div class='col'>
+                            <div class="form-group row">
+                                <label for="example-datetime-local-input" class="col-2 col-form-label">結束時間</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
+                                        id="example-datetime-local-input" name="end">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="ui button" tabindex="0">送出</div>
-                </form>
-            </div>
+                </div>
+                <div class="ui button" tabindex="0">送出</div>
+            </form>
         </div>
     </div>
 </div>
