@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticleService } from 'src/app/service/article/article.service';
-import { ResponseArticle } from 'src/app/Account';
+import { PatchArticle } from 'src/app/Account';
 import $ from 'jquery';
 
 @Component({
@@ -8,11 +8,11 @@ import $ from 'jquery';
   templateUrl: './announcement.component.html',
   styleUrls: ['./announcement.component.css']
 }) export class AnnouncementComponent implements OnInit {
-  announcements: ResponseArticle[] = [];
+  announcements: PatchArticle[] = [];
 
   editing: Boolean = false;
   editingIndex: number = undefined;
-  editingAnnouncement: ResponseArticle = {
+  editingAnnouncement: PatchArticle = {
     "uuid": "",
     "owner": "",
     "createDate": "",

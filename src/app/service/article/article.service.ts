@@ -25,8 +25,8 @@ export class ArticleService {
     const creator = this.http.post<CreateArticle[]>(this.apiURL + 'article/', requestArticle)
     return creator;
   }
-  patchEvent(response: PatchArticle[], uuid: string): Observable<PatchArticle[]> {
-    const putter = this.http.patch<PatchArticle[]>(this.apiURL + 'article/' + uuid+'/', response)
+  patchEvent(response: PatchArticle, uuid: string): Observable<PatchArticle> {
+    const putter = this.http.patch<PatchArticle>(this.apiURL + 'article/' + uuid+'/', response)
     return putter;
   }
   deleteEvent(accountname: string, event_uuid: boolean) {
