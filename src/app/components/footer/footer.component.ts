@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModule } from 'fomantic-ui';
-import $ from 'jquery'
+import * as $ from 'jquery'
 import { FormBuilder, FormGroup, FormControl, NgModel } from '@angular/forms';
 
 @Component({
@@ -10,14 +10,14 @@ import { FormBuilder, FormGroup, FormControl, NgModel } from '@angular/forms';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { 
-    
+  constructor() {
+
   }
   test() {
-    
+
   }
   ngOnInit(): void {
-    
+
   }
 
 }
