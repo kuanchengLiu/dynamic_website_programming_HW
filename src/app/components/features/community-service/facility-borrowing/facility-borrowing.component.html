@@ -31,41 +31,27 @@
                     </tr>
                 </tbody>
             </table>
-            <form class="ui form">
+            <form class="ui form segment" action="/api/v1/borrowFacility/" method="POST">
+                <h1 class="ui dividing header">需要借用設備？</h1>
                 <div class="field">
                     <label>借用設施</label>
-                    <select class="ui fluid dropdown">
+                    <select name="facilityName" class="ui fluid dropdown" required>
                         <option value="">選擇物品</option>
-                        <option value="a">羽球拍</option>
-                        <option value="b">撞球</option>
-                        <option value="c">健身用品</option>
-                        <option value="d">推車</option>
+                        <option value="羽球拍">羽球拍</option>
+                        <option value="撞球">撞球</option>
+                        <option value="健身用品">健身用品</option>
+                        <option value="推車">推車</option>
                     </select>
                 </div>
                 <div class="field">
-                    <label>借用時間</label>
-                    <div class="column">
-                        <div class='col'>
-                            <div class="form-group row">
-                                <label for="example-datetime-local-input" class="col-2 col-form-label">開始時間</label>
-                                <div class="col-10">
-                                    <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
-                                        id="example-datetime-local-input" name="start">
-                                </div>
-                            </div>
-                        </div>
-                        <div class='col'>
-                            <div class="form-group row">
-                                <label for="example-datetime-local-input" class="col-2 col-form-label">結束時間</label>
-                                <div class="col-10">
-                                    <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
-                                        id="example-datetime-local-input" name="end">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <label>開始時間</label>
+                    <input type="date" name="startTime" required>
                 </div>
-                <div class="ui button" tabindex="0">送出</div>
+                <div class="field">
+                    <label>借用時長</label>
+                    <input type="number" name="lengthOfTime" placeholder="10" required>
+                </div>
+                <button class="ui button" type="submit" (click)="submitForm()">送出</button>
             </form>
         </div>
     </div>

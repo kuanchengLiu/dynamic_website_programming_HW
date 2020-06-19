@@ -35,5 +35,7 @@ export class FacilityBorrowingComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-
+  submitForm(): void {
+    window.alert("您沒有權限！");
+  }
 }

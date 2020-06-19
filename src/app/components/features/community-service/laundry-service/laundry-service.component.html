@@ -31,10 +31,10 @@
                     </tr>
                 </tbody>
             </table>
-            <form class="ui form">
+            <form class="ui form segment" action="/api/v1/EntrustLaundryToWash/" method="POST">
                 <div class="field">
                     <label>送洗項目</label>
-                    <select class="ui fluid dropdown">
+                    <select class="ui fluid dropdown" required>
                         <option value="">選擇項目</option>
                         <option value="a">水洗</option>
                         <option value="b">乾洗</option>
@@ -42,21 +42,13 @@
                 </div>
                 <div class="field">
                     <label>送洗備註(選填)</label>
-                    <input type="text" name="" placeholder="選填">
+                    <input type="text" name="" placeholder="衣服很貴">
                 </div>
                 <div class="field">
                     <label>收衣服時間</label>
-                    <div class="form-group row">
-                        <label for="example-datetime-local-input" class="col-2 col-form-label">時間</label>
-                        <div class="col-10">
-                            <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
-                                id="example-datetime-local-input" name="end">
-                        </div>
-                    </div>
-
-
+                    <input type="date" name="startTime" required>
                 </div>
-                <div class="ui button" tabindex="0">送出</div>
+                <button class="ui button" type="submit" (click)="submitForm()">送出</button>
             </form>
         </div>
     </div>
