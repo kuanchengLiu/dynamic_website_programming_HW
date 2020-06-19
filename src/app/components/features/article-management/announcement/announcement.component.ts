@@ -27,7 +27,6 @@ import * as $ from 'jquery';
   constructor(private articleSerivce: ArticleService) { }
 
   ngOnInit(): void {
-    // announcements = this.getAnnouncements();
     this.articleSerivce.getAllArticle().subscribe((response) => {
       this.announcements = response;
     })

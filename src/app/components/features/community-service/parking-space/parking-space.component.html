@@ -11,6 +11,26 @@
         </div>
         <div class="twelve wide column">
             <h1 class="ui dividing header">住戶機車車位申請-表單</h1>
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="ui table">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>內容</th>
+                        <th>最後編輯</th>
+                        <th>編輯者</th>
+                        <th>狀態</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of eventItem;">
+                        <td>{{ item.createDate }}</td>
+                        <td>{{ item.context }}</td>
+                        <td>{{ item.lastEditDate }}</td>
+                        <td>{{ item.owner }}</td>
+                        <td>{{ item.status }}</td>
+                    </tr>
+                </tbody>
+            </table>
             <form class="ui form">
                 <div class="field">
                     <label>車位類型</label>

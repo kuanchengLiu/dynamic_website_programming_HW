@@ -11,7 +11,7 @@
         </div>
         <div class="twelve wide column">
             <h1 class="ui dividing header">繳費清單</h1>
-            <table datatable [dtOptions]="dtOptions" class="ui table">
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="ui table">
                 <thead>
                     <tr>
                         <th>日期</th>
@@ -22,26 +22,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>06/09</td>
-                        <td>電話費 1000</td>
-                        <td>06/15</td>
-                        <td>Admin</td>
-                        <td>已繳納</td>
-                    </tr>
-                    <tr>
-                        <td>06/09</td>
-                        <td>電費 10000</td>
-                        <td>06/15</td>
-                        <td>Admin</td>
-                        <td>已繳納</td>
-                    </tr>
-                    <tr>
-                        <td>06/09</td>
-                        <td>水費 1000000</td>
-                        <td>06/15</td>
-                        <td>Admin</td>
-                        <td>已繳納</td>
+                    <tr *ngFor="let item of eventItem;">
+                        <td>{{ item.createDate }}</td>
+                        <td>{{ item.context }}</td>
+                        <td>{{ item.lastEditDate }}</td>
+                        <td>{{ item.owner }}</td>
+                        <td>{{ item.status }}</td>
                     </tr>
                 </tbody>
             </table>

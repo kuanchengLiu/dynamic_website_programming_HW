@@ -11,37 +11,17 @@
         </div>
         <div class="twelve wide column">
             <h1 class="ui dividing header">住戶出入紀錄</h1>
-            <table datatable [dtOptions]="dtOptions" class="ui table">
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="ui table">
                 <thead>
                     <tr>
-                        <th>日期</th>
-                        <th>內容</th>
-                        <th>最後編輯</th>
-                        <th>編輯者</th>
-                        <th>狀態</th>
+                        <th>紀錄時間</th>
+                        <th>紀錄內容</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>06/09 23:59</td>
-                        <td>F13-2</td>
-                        <td>06/15</td>
-                        <td>Admin</td>
-                        <td>in</td>
-                    </tr>
-                    <tr>
-                        <td>06/09 23:59</td>
-                        <td>F13-2</td>
-                        <td>06/15</td>
-                        <td>Admin</td>
-                        <td>out</td>
-                    </tr>
-                    <tr>
-                        <td>06/09 23:59</td>
-                        <td>F13-2</td>
-                        <td>06/15</td>
-                        <td>Admin</td>
-                        <td>in</td>
+                    <tr *ngFor="let item of eventItem;">
+                        <td>{{ item.lastEditDate }}</td>
+                        <td>{{ item.context }}</td>
                     </tr>
                 </tbody>
             </table>
