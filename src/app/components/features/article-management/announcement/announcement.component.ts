@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticleService } from 'src/app/service/article/article.service';
 import { PatchArticle } from 'src/app/Account';
-import $ from 'jquery';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-announcement',
@@ -27,7 +27,6 @@ import $ from 'jquery';
   constructor(private articleSerivce: ArticleService) { }
 
   ngOnInit(): void {
-    // announcements = this.getAnnouncements();
     this.articleSerivce.getAllArticle().subscribe((response) => {
       this.announcements = response;
     })

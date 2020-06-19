@@ -1,80 +1,36 @@
 <div class="container contextMargin">
     <div class="ui stackable vertically divided grid">
         <div class="four wide column">
-            <div class="four column centered row contextMargin">
-                <div class="column">
-                    <div class="ui vertical menu column">
-                        <div class="ui left pointing dropdown link item">
-                            <i class="dropdown icon"></i>
-                            繳費狀態
-                            <div class="menu">
-                                <div class="item" routerLink="/PaymentItems">已繳納</div>
-                                <div class="item" routerLink="/PaymentItems">未繳納</div>
-                            </div>
-                        </div>
-                        <a class="item" routerLink="/FacilityBorrowing">公設借用表單</a>
-                        <a class="item" routerLink="/AccessRecord">人員出入紀錄</a>
-                        <a class="item" routerLink="/LaundryService">送洗衣物-表單 </a>
-                        <a class="item" routerLink="/ParkingSpace">住戶機車車位申請-表單 </a>
-                    </div>
-                </div>
+            <div class="ui fluid vertical menu">
+                <a class="item active">繳費清單</a>
+                <a class="item" routerLink="/FacilityBorrowing">公設借用表單</a>
+                <a class="item" routerLink="/AccessRecord">人員出入紀錄</a>
+                <a class="item" routerLink="/LaundryService">送洗衣物-表單 </a>
+                <a class="item" routerLink="/ParkingSpace">住戶機車車位申請-表單 </a>
             </div>
         </div>
-        <div class="left aligned eight wide column">
-            <div class="top_news_detail_visual" id="contextMargin">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-7">
-                            <h1>繳費清單</h1>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-
-                                <select class="custom-select" name="item">
-                                    <option selected>未繳納</option>
-                                    <option value="">已繳納</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <table class="ui five column table">
-                    <thead>
-                        <tr>
-                            <th>日期</th>
-                            <th>內容</th>
-                            <th>最後編輯</th>
-                            <th>編輯者</th>
-                            <th>狀態</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>06/09</td>
-                            <td>電話費 1000</td>
-                            <td>06/15</td>
-                            <td>Admin</td>
-                            <td>已繳納</td>
-                        </tr>
-                        <tr>
-                            <td>06/09</td>
-                            <td>電費 10000</td>
-                            <td>06/15</td>
-                            <td>Admin</td>
-                            <td>已繳納</td>
-                        </tr>
-                        <tr>
-                            <td>06/09</td>
-                            <td>水費 1000000</td>
-                            <td>06/15</td>
-                            <td>Admin</td>
-                            <td>已繳納</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
+        <div class="twelve wide column">
+            <h1 class="ui dividing header">繳費清單</h1>
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="ui table">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>內容</th>
+                        <th>最後編輯</th>
+                        <th>編輯者</th>
+                        <th>狀態</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of eventItem;">
+                        <td>{{ item.createDate }}</td>
+                        <td>{{ item.context }}</td>
+                        <td>{{ item.lastEditDate }}</td>
+                        <td>{{ item.owner }}</td>
+                        <td>{{ item.status }}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

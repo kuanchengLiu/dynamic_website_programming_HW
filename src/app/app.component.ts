@@ -26,7 +26,7 @@ export class AppComponent{
 
   ];
 
-  permission: Permission = 
+  permission: Permission =
     {
       'account': 'YukinaMochizuki',
       'permission': '1'

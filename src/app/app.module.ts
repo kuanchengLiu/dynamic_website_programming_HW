@@ -23,6 +23,7 @@ import { FormGroup, ReactiveFormsModule, NgControl, FormsModule } from '@angular
 import { FooterComponent } from './components/footer/footer.component';
 import { PersonalComponent } from './components/features/personal/personal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormsModule,
     FormsModule,
     NgbModule,
-
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

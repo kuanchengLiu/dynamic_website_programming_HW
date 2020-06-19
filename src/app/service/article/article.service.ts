@@ -9,7 +9,7 @@ import { CreateArticle, PatchArticle } from 'src/app/Account';
 })
 export class ArticleService {
 
-  private apiURL = 'https://virtserver.swaggerhub.com/YukinaMochizuki/Dynamic_Web_Project/1.1.0/';
+  private apiURL = 'http://api.test32.yukina.tw/api/v1/';
 
   constructor(private http: HttpClient, private messageService: MessageService) { }
 
@@ -18,7 +18,7 @@ export class ArticleService {
   };
 
   getAllArticle(): Observable<any> {
-    const getter = this.http.get<any>(this.apiURL + 'article');
+    const getter = this.http.get<any>(this.apiURL + 'article/');
     return getter;
   }
   createEvent(requestArticle: CreateArticle[]): Observable<CreateArticle[]> {
@@ -30,7 +30,7 @@ export class ArticleService {
     return putter;
   }
   deleteEvent(accountname: string, event_uuid: boolean) {
-    const deleter = this.http.delete<any>(this.apiURL + 'article/' + accountname + '/' + event_uuid+'/');
+    const deleter = this.http.delete<any>(this.apiURL + 'article/' + accountname + '/' + event_uuid + '/');
     return deleter;
   }
 }

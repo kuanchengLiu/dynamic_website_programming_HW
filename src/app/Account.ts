@@ -39,7 +39,7 @@ export interface ResponseKanban {
     posts: []
 }
 
-export interface PostRequestEvent {
+export interface EventPatchRequest {
     owner: string,
     eventType: string,
     context: string,
@@ -49,14 +49,23 @@ export interface PostRequestEvent {
 export interface ResponseEvent {
     uuid: string,
     owner: string,
-    createData: string,
+    createDate: string,
     lastEditDate: string,
     lastEditAccount: string,
     context: string,
     status: string
 }
 
-
+export interface EventItem {
+    uuid: string,
+    owner: string,
+    createDate: string,
+    lastEditDate: string,
+    lastEditAccount: string,
+    eventType: string,
+    context: string,
+    status: string
+}
 
 export interface Permission {
     account: string,

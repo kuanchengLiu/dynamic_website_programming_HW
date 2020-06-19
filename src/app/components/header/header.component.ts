@@ -4,7 +4,7 @@ import {
 }
 
   from '@angular/core';
-import $ from 'jquery';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-header',
@@ -26,7 +26,7 @@ import $ from 'jquery';
       }
     });
 
-    
+
     $(".navbar-toggler").on("click", () => {
       $("#navbarNavDropdown").toggleClass("show");
       $("#nav-blank").toggleClass("show")
