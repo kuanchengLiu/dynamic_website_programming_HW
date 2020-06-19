@@ -32,9 +32,10 @@
                 </tbody>
             </table>
             <form class="ui form segment" action="/api/v1/EntrustLaundryToWash/" method="POST">
+                <h1 class="ui dividing header">需要車位？</h1>
                 <div class="field">
                     <label>車位類型</label>
-                    <select class="ui fluid dropdown" required>
+                    <select class="ui fluid dropdown" name="type" required>
                         <option value="">選擇項目</option>
                         <option value="汽車">汽車</option>
                         <option value="機車">機車</option>
@@ -43,7 +44,7 @@
                 </div>
                 <div class="field">
                     <label>希望的位置(選填)</label>
-                    <input type="text" name="" placeholder="地下停車場">
+                    <input type="text" name="desiredLocation" placeholder="地下停車場">
                 </div>
                 <button class="ui button" type="submit" (click)="submitForm()">送出</button>
             </form>
